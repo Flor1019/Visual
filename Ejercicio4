@@ -1,0 +1,19 @@
+class DispositivoElectronico:
+    def __init__(self, precio_compra, caracteristicas):
+        self._precio_compra = precio_compra
+        self._caracteristicas = caracteristicas
+
+    def obtener_precio_venta(self):
+        return round(self._precio_compra * 1.7, 2)
+
+    def mostrar_informacion(self):
+        return f"Precio de Venta: {self.obtener_precio_venta()}, Características: {', '.join(self._caracteristicas)}"
+
+# uso
+celular = DispositivoElectronico(precio_compra=300, caracteristicas=["Pantalla 6.5\"", "64GB", "4GB RAM", "Cámara 12MP", "Batería 4000mAh", "Dual SIM"])
+tablet = DispositivoElectronico(precio_compra=200, caracteristicas=["Pantalla 10\"", "128GB", "6GB RAM", "Cámara 8MP", "Batería 6000mAh", "WiFi"])
+portatil = DispositivoElectronico(precio_compra=700, caracteristicas=["Pantalla 15\"", "256GB SSD", "16GB RAM", "Cámara HD", "Batería 5000mAh", "Teclado retroiluminado"])
+
+print(celular.mostrar_informacion())
+print(tablet.mostrar_informacion())
+print(portatil.mostrar_informacion())
